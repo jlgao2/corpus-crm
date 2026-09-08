@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 // Meta Download-Your-Information automation — runs ON THE HOMELAB.
 //   node pipeline/meta-dyi.mjs setup     # headed browser; log into FB+IG once (Screen Sharing)
-//   node pipeline/meta-dyi.mjs request   # weekly: request a messages-JSON export
+//   node pipeline/meta-dyi.mjs request   # weekly: request messages JSON since the corpus's last message
 //   node pipeline/meta-dyi.mjs poll      # daily: download ready exports → meta-drops/
+//
+// META_DYI_DRYRUN=1 with `request` configures the export but screenshots the
+// confirm screen instead of submitting — use it to supervise the first run.
 //
 // Philosophy: fail LOUD, never retry into a checkpoint. Any unexpected page
 // → screenshot to logs + non-zero exit; the freshness nag surfaces it.
@@ -13,8 +16,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { chromium } from 'playwright';
+import { getMaxTs, computeSinceMs, pickPreset } from './meta-dyi-dates.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -53,11 +57,48 @@ function loadState() {
   try { return JSON.parse(fs.readFileSync(STATE, 'utf8')); } catch { return {}; }
 }
 
+// Meta blocks/checkpoints logins from an obviously-automated browser, so the
+// session never persists. Launch real Chrome (not Chrome-for-Testing), drop the
+// automation switches, and null navigator.webdriver — the flag Meta reads. Set
+// META_DYI_CHANNEL=chromium on a box without Google Chrome (e.g. headless Linux).
 const ctx = await chromium.launchPersistentContext(PROFILE, {
   headless: !headed,
+  channel: process.env.META_DYI_CHANNEL === 'chromium' ? undefined : 'chrome',
   viewport: { width: 1280, height: 900 },
+  ignoreDefaultArgs: ['--enable-automation'],
+  args: ['--disable-blink-features=AutomationControlled'],
+});
+await ctx.addInitScript(() => {
+  Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
 });
 const page = ctx.pages()[0] ?? await ctx.newPage();
+
+// Meta's SPA leaves every prior sheet mounted, so a locator often resolves to
+// several stacked (mostly hidden) copies. Always act on the visible one.
+const vClick = (loc) => loc.filter({ visible: true }).first().click({ timeout: 20_000 });
+
+// Both submitting an export and downloading one are gated behind a password
+// re-auth ("Please re-enter your password"). Until it clears, the action does
+// nothing at all — so an unanswered prompt must fail, never pass silently.
+async function clearPasswordGate() {
+  const prompt = page.getByText(/re-enter your password/i).filter({ visible: true }).first();
+  // isVisible() does not wait — the prompt renders a beat after the click.
+  if (!(await prompt.waitFor({ state: 'visible', timeout: 15_000 }).then(() => true, () => false))) return;
+  // Env var wins; unattended launchd runs read the login Keychain
+  // (security add-generic-password -s meta-dyi -a you -w '...').
+  const pw = process.env.META_DYI_PASSWORD || (() => {
+    try { return execSync('security find-generic-password -s meta-dyi -w', { encoding: 'utf8' }).trim(); }
+    catch { return ''; }
+  })();
+  if (!pw) throw new Error('Meta wants the password re-entered; set META_DYI_PASSWORD or add Keychain item "meta-dyi"');
+  await page.getByRole('textbox').filter({ visible: true }).first().fill(pw);
+  await vClick(page.getByRole('button', { name: /^continue$/i }));
+  for (let i = 0; i < 60; i++) {
+    if (!(await prompt.isVisible().catch(() => false))) return;
+    await page.waitForTimeout(500);
+  }
+  throw new Error('password re-auth did not clear');
+}
 
 if (mode === 'setup') {
   console.log('[meta-dyi] headed browser open. Log into facebook.com AND instagram.com,');
@@ -68,41 +109,146 @@ if (mode === 'setup') {
   process.exit(0);
 }
 
+// Accounts Center keeps one profile per app, each needing its own export.
+// Facebook carries Messenger; Instagram carries IG DMs.
+//
+// Both ingesters now merge many export roots, so short date ranges are additive
+// for either profile: messenger scans inputs/messenger/*, instagram layers
+// inputs/instagram-dyi-* over the inputs/instagram base and dedupes on message
+// identity. Force a full history with META_DYI_IG_PRESET=all when re-baselining.
+const PROFILES = [
+  { key: 'facebook', label: 'Facebook', source: 'messenger', incremental: true },
+  {
+    key: 'instagram',
+    label: 'Instagram',
+    source: 'instagram',
+    incremental: !process.env.META_DYI_IG_PRESET,
+    preset: process.env.META_DYI_IG_PRESET,
+  },
+];
+
 if (mode === 'request') {
   const state = loadState();
   const week = 7 * 86_400_000;
-  if (state.lastRequest && Date.now() - state.lastRequest < week - 3_600_000) {
-    console.log('[meta-dyi] last request < 1 week ago — skipping');
+  // Per-profile timestamps so one profile's success never suppresses the
+  // other's retry (older builds stored a single scalar — migrate it).
+  const last = typeof state.lastRequest === 'object' && state.lastRequest !== null
+    ? { ...state.lastRequest }
+    : (state.lastRequest ? { facebook: state.lastRequest } : {});
+
+  const only = process.env.META_DYI_PROFILE;
+  const due = PROFILES.filter((p) => (!only || only === p.key)
+    && !(last[p.key] && Date.now() - last[p.key] < week - 3_600_000));
+  if (!due.length) {
+    console.log('[meta-dyi] all profiles requested < 1 week ago — skipping');
     await ctx.close(); process.exit(0);
   }
-  await page.goto(DYI_URL, { waitUntil: 'networkidle', timeout: 60_000 });
-  if (/login|checkpoint/i.test(page.url())) await bail(page, `not logged in (${page.url()})`);
-  // The DYI flow's labels are stable-ish English; selectors here are the
-  // expected-to-iterate part. First run MUST be supervised.
-  try {
-    await page.getByRole('button', { name: /download or transfer/i }).click({ timeout: 20_000 });
-    await page.getByText(/specific types of information/i).click({ timeout: 20_000 });
-    await page.getByText(/^messages$/i).first().click({ timeout: 20_000 });
-    await page.getByRole('button', { name: /next/i }).click({ timeout: 20_000 });
-    await page.getByText(/download to device/i).click({ timeout: 20_000 });
-    await page.getByRole('button', { name: /next/i }).click({ timeout: 20_000 });
-    // Format JSON + date range last 30 days when the options page offers them.
-    const fmt = page.getByText(/format/i).first();
-    if (await fmt.isVisible({ timeout: 5_000 }).catch(() => false)) {
-      await fmt.click();
-      await page.getByText(/^json$/i).click({ timeout: 10_000 });
+
+  // How far back to ask: the corpus knows. Request everything since the last
+  // message we already have for that source (minus a safety margin), mapped to
+  // the smallest date preset that covers the gap.
+  for (const p of due) {
+    if (p.incremental) {
+      try {
+        const maxTs = await getMaxTs(p.source);
+        const sinceMs = computeSinceMs({ maxTsMs: maxTs });
+        p.preset = pickPreset(sinceMs, Date.now());
+        console.log(
+          `[meta-dyi] corpus max(${p.source})=${maxTs ? new Date(maxTs).toISOString().slice(0, 10) : 'none'}` +
+          ` → since ${sinceMs ? new Date(sinceMs).toISOString().slice(0, 10) : 'all time'} (preset: ${p.preset})`,
+        );
+      } catch (e) {
+        console.error(`[meta-dyi] FAIL: cannot read corpus for since-date: ${e.message}`);
+        await ctx.close(); process.exit(1);
+      }
+    } else {
+      console.log(`[meta-dyi] ${p.label}: preset ${p.preset} (ingester needs one self-contained root)`);
     }
-    const range = page.getByText(/date range/i).first();
-    if (await range.isVisible({ timeout: 5_000 }).catch(() => false)) {
-      await range.click();
-      await page.getByText(/last 30 days|past 30 days/i).click({ timeout: 10_000 });
-    }
-    await page.getByRole('button', { name: /create files|submit request/i }).click({ timeout: 20_000 });
-  } catch (e) {
-    await bail(page, `request flow broke: ${e.message.slice(0, 120)}`);
   }
-  fs.writeFileSync(STATE, JSON.stringify({ ...state, lastRequest: Date.now() }));
-  console.log('[meta-dyi] export requested');
+  const PRESET_LABELS = {
+    'last-week': /^Last week$/i,
+    'last-month': /^Last month$/i,
+    'last-3-months': /^Last 3 months$/i,
+    'last-6-months': /^Last 6 months$/i,
+    'last-year': /^Last year$/i,
+    'last-3-years': /^Last 3 years$/i,
+    'all': /^All time$/i,
+  };
+
+  const dryRun = process.env.META_DYI_DRYRUN === '1';
+  // The DYI flow is: Create export → choose profile → export destination →
+  // a "Confirm your export" hub. From the hub each option (Customize / Format /
+  // Date range) opens a sub-sheet with its own Save. Selectors are the
+  // expected-to-iterate part; bail() screenshots any drift. First run MUST be
+  // supervised — use META_DYI_DRYRUN=1 to configure but stop before submitting.
+  // Treat the visible "Start export" button as the signal we're back on the hub
+  // (a sub-sheet overlays it; closing the sheet reveals it again).
+  const waitHub = () => page.getByRole('button', { name: /start export/i })
+    .filter({ visible: true }).first().waitFor({ timeout: 20_000 });
+  // A sub-sheet is open iff a "Save" button is visible (the hub has none). Wait
+  // on that rather than on the hub, which stays laid-out (merely occluded) under
+  // an open sheet and so always reads as "visible".
+  const saveAndReturn = async () => {
+    await vClick(page.getByRole('button', { name: /^save$/i }));
+    const openSheet = page.getByRole('button', { name: /^save$/i }).filter({ visible: true });
+    for (let i = 0; i < 60; i++) {
+      if ((await openSheet.count()) === 0) return;
+      await page.waitForTimeout(250);
+    }
+    throw new Error('sub-sheet stayed open after Save');
+  };
+  for (const p of due) {
+    // Each profile is a fresh pass through the wizard — reload so no sheet from
+    // the previous profile is still mounted.
+    await page.goto(DYI_URL, { waitUntil: 'networkidle', timeout: 60_000 });
+    if (/login|checkpoint/i.test(page.url())) await bail(page, `not logged in (${page.url()})`);
+    try {
+      await vClick(page.getByRole('button', { name: /create export|download or transfer/i }));
+      await vClick(page.getByText(p.label, { exact: true }));              // choose profile
+      await vClick(page.getByText(/export to device/i));                   // destination
+      await waitHub();
+
+      // Leave "Customize information" at its default (all available information
+      // excluding data logs) — we want the heavy categories too (photos, posts,
+      // media), not just messages. Only format and date range need changing.
+
+      // Format → JSON (default HTML can't be ingested).
+      await vClick(page.getByText(/^format$/i));
+      await vClick(page.getByText(/^json$/i));
+      await saveAndReturn();
+
+      // Date range → the preset chosen for this profile above.
+      await vClick(page.getByText(/^date range$/i));
+      await vClick(page.getByText(PRESET_LABELS[p.preset]));
+      await saveAndReturn();
+
+      if (dryRun) {
+        const cfg = await page.evaluate(() => {
+          const out = {};
+          for (const el of document.querySelectorAll('[role="button"]')) {
+            if (!el.checkVisibility?.()) continue;
+            const t = (el.innerText || '').replace(/\s+/g, ' ').trim();
+            if (/^Format/.test(t)) out.format = t;
+            else if (/^Date range/.test(t)) out.dateRange = t;
+            else if (/^Customize information/.test(t)) out.customize = t;
+          }
+          return out;
+        });
+        const shot = path.join(LOGS, `meta-dyi-dryrun-${p.key}-${Date.now()}.png`);
+        await page.screenshot({ path: shot });
+        console.log(`[meta-dyi] DRY RUN ${p.label} config: ${JSON.stringify(cfg)}`);
+        console.log(`[meta-dyi] DRY RUN — configured but NOT submitted. Review: ${shot}`);
+        continue;
+      }
+      await vClick(page.getByRole('button', { name: /start export/i }));
+      await clearPasswordGate();
+    } catch (e) {
+      await bail(page, `request flow broke (${p.label}): ${e.message.slice(0, 120)}`);
+    }
+    last[p.key] = Date.now();
+    fs.writeFileSync(STATE, JSON.stringify({ ...state, lastRequest: last }));
+    console.log(`[meta-dyi] export requested: ${p.label}`);
+  }
   await ctx.close(); process.exit(0);
 }
 
@@ -181,26 +327,39 @@ if (mode === 'poll') {
   await page.goto(DYI_URL, { waitUntil: 'networkidle', timeout: 60_000 });
   if (/login|checkpoint/i.test(page.url())) await bail(page, `not logged in (${page.url()})`);
   try {
-    const available = page.getByText(/available (files|downloads)/i).first();
-    if (!(await available.isVisible({ timeout: 10_000 }).catch(() => false))) {
+    const available = page.getByText(/available (files|downloads)/i).filter({ visible: true }).first();
+    // isVisible() does not wait; without a real wait a slow render reads as
+    // "nothing ready" and the export is silently missed.
+    if (!(await available.waitFor({ state: 'visible', timeout: 15_000 }).then(() => true, () => false))) {
       console.log('[meta-dyi] no available-files section — nothing ready');
       await ctx.close(); process.exit(0);
     }
     await available.click();
-    const buttons = await page.getByRole('button', { name: /^download$/i }).all();
-    if (!buttons.length) {
+
+    // Two buttons both read "Download": the one on the job card only navigates
+    // to the "Download your files" screen; the one there starts the transfer,
+    // behind the same password gate as Start export.
+    const dlButtons = () => page.getByRole('button', { name: /^download$/i }).filter({ visible: true });
+    if (!(await dlButtons().count())) {
       console.log('[meta-dyi] nothing ready to download');
       await ctx.close(); process.exit(0);
     }
+    await vClick(dlButtons());
+    await page.getByText(/download your files/i).filter({ visible: true }).first()
+      .waitFor({ timeout: 20_000 });
+
+    const count = await dlButtons().count();
     let saved = 0;
-    for (const btn of buttons) {
-      const [download] = await Promise.all([
-        page.waitForEvent('download', { timeout: 120_000 }),
-        btn.click(),
-      ]);
-      const name = `${Date.now()}-${download.suggestedFilename()}`;
+    for (let i = 0; i < count; i++) {
+      // Arm the listener before the click — the transfer starts as soon as the
+      // password clears, and a 100MB+ export is slow.
+      const download = page.waitForEvent('download', { timeout: 900_000 });
+      await dlButtons().nth(i).click({ timeout: 20_000 });
+      await clearPasswordGate();
+      const d = await download;
+      const name = `${Date.now()}-${d.suggestedFilename()}`;
       const zip = path.join(DROPS, name);
-      await download.saveAs(zip);
+      await d.saveAs(zip);
       console.log(`[meta-dyi] saved ${name}`);
       unpackDrop(zip);
       saved++;

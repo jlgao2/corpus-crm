@@ -68,6 +68,80 @@ Old releases accumulate — `npm run release:prune` shows what it would delete,
 Set `SELF_NAME` to your own display name — identity resolution uses it to
 recognise you in your own threads.
 
+## Automating the exports
+
+Two of the sources can be kept topped up without you clicking through export
+flows every week. Both are macOS-oriented and both are optional — the manual
+export path in the table above always works.
+
+### Meta (Facebook + Instagram)
+
+`pipeline/meta-dyi.mjs` drives Meta's "Download Your Information" flow in a
+real browser. Three subcommands:
+
+```bash
+node pipeline/meta-dyi.mjs setup     # once: log in, by hand, in a headed window
+node pipeline/meta-dyi.mjs request   # ask Meta to build an export
+node pipeline/meta-dyi.mjs poll      # download anything that is ready, and unzip it
+```
+
+`setup` opens Google Chrome, waits while you sign in to **both**
+facebook.com and instagram.com, and keeps the session in a persistent profile
+at `~/.meta-dyi-profile`. Nothing else works until that exists.
+
+`request` asks only for what you are missing: it reads the newest message
+already in your corpus per source and picks the smallest date-range preset
+that covers the gap, so a weekly run fetches a week rather than your whole
+history. It skips any profile requested in the last seven days, so running it
+by hand is harmless.
+
+`poll` downloads every export Meta has finished into `META_DYI_DROPS_DIR`,
+unzips it into `META_DYI_INPUTS_DIR`, and links it where the ingesters expect
+it. Meta takes hours to days to build an export, so `poll` finding nothing is
+the normal case.
+
+Schedule both (Mondays 04:00 request, daily 04:30 poll):
+
+```bash
+node pipeline/install-meta-launchd.js install     # macOS launchd
+node pipeline/install-meta-launchd.js uninstall
+```
+
+| Variable | Meaning |
+|---|---|
+| `META_DYI_DROPS_DIR` | where downloaded `.zip` exports land |
+| `META_DYI_INPUTS_DIR` | where they are unzipped for ingest |
+| `META_DYI_PASSWORD` | Meta re-asks for your password mid-flow; supply it here, or store it in the macOS Keychain as service `meta-dyi` |
+| `META_DYI_PROFILE` | `facebook` or `instagram` — run just one |
+| `META_DYI_DRYRUN=1` | configure the export but do not submit it |
+| `META_DYI_CHANNEL` | `chromium` instead of system Chrome |
+
+Needs `playwright` and Google Chrome, so install dev dependencies
+(`npm install`, not `npm ci --omit=dev`).
+
+**It will break.** This automates a website Meta redesigns without warning;
+when a selector moves, the run fails and writes a screenshot next to the logs
+so you can see which step lost its footing. Treat it as a convenience, not
+infrastructure — and if a run fails, the manual export flow still works.
+
+### iMessage
+
+There is no automation here, and deliberately so: reading the message
+database is a Full Disk Access grant, not something to hide inside a cron
+job. `pipeline/ingest/imessage.js` parses the output of
+[imessage-exporter](https://github.com/ReagentX/imessage-exporter):
+
+```bash
+brew install imessage-exporter
+# System Settings → Privacy & Security → Full Disk Access → add your terminal
+imessage-exporter -f txt -o inputs/imessage
+npm run build-db
+```
+
+One file per conversation in `inputs/imessage/`, named by phone number or
+email. Re-running the exporter and rebuilding is the whole update loop.
+
+
 ## MCP server
 
 `pipeline/mcp/` exposes the corpus to an LLM over MCP (Model Context
