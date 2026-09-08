@@ -1,0 +1,50 @@
+From demo.user@example.com Mon Jan 01 10:00:00 2024
+From: Demo User <demo.user@example.com>
+To: Maya Torres <maya@example.com>
+Subject: dinner?
+Date: Mon, 1 Jan 2024 10:00:00 +0000
+Message-ID: <m1@mail.gmail.com>
+X-GM-THRID: 1000
+X-Gmail-Labels: Sent
+Content-Type: text/plain; charset=utf-8
+
+hey maya, dinner friday?
+
+From maya@example.com Mon Jan 01 12:00:00 2024
+From: Maya Torres <maya@example.com>
+To: Demo User <demo.user@example.com>
+Subject: Re: dinner?
+Date: Mon, 1 Jan 2024 12:00:00 +0000
+Message-ID: <m2@example.com>
+In-Reply-To: <m1@mail.gmail.com>
+References: <m1@mail.gmail.com>
+X-GM-THRID: 1000
+X-Gmail-Labels: Inbox
+Content-Type: text/plain; charset=utf-8
+
+yes! 7pm works 😊
+
+From newsletter@brand.com Tue Jan 02 09:00:00 2024
+From: Cool Brand <newsletter@brand.com>
+To: demo.user@example.com
+Subject: 50% OFF EVERYTHING
+Date: Tue, 2 Jan 2024 09:00:00 +0000
+Message-ID: <n1@brand.com>
+X-GM-THRID: 2000
+X-Gmail-Labels: Category promotions
+List-Unsubscribe: <https://brand.com/unsub>
+Content-Type: text/plain; charset=utf-8
+
+Shop now!
+
+From no-reply@stripe.com Tue Jan 02 11:00:00 2024
+From: Stripe <no-reply@stripe.com>
+To: demo.user@example.com
+Subject: Your receipt
+Date: Tue, 2 Jan 2024 11:00:00 +0000
+Message-ID: <r1@stripe.com>
+X-GM-THRID: 3000
+X-Gmail-Labels: Category purchases
+Content-Type: text/plain; charset=utf-8
+
+Payment received.

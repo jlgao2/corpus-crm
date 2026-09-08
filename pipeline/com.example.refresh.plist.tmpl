@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>            <string>com.example.refresh</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>{{NODE_PATH}}</string>
+    <string>{{SERVER_PATH}}</string>
+  </array>
+  <key>WorkingDirectory</key> <string>{{PROJECT_DIR}}</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key> <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+  </dict>
+  <key>StandardOutPath</key>  <string>{{LOG_DIR}}/refresh.log</string>
+  <key>StandardErrorPath</key><string>{{LOG_DIR}}/refresh.log</string>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>   <integer>3</integer>
+    <key>Minute</key> <integer>30</integer>
+  </dict>
+  <key>RunAtLoad</key>        <false/>
+</dict>
+</plist>

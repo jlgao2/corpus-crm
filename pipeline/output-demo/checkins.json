@@ -1,0 +1,289 @@
+{
+  "generated": "2026-06-28T12:00:00.000Z",
+  "today": "2026-06-28",
+  "count": 12,
+  "people": [
+    {
+      "canonical_id": "id-109",
+      "display_name": "Nina Okafor",
+      "sources": [
+        "imessage"
+      ],
+      "msg_count": 1800,
+      "first_iso": "2019-06-01",
+      "last_iso": "2026-03-22",
+      "days_since_last": 98,
+      "last_msg_from": "me",
+      "last_msg_excerpt": "Congratulations! That's a real milestone.",
+      "birthday": {
+        "month": 8,
+        "day": 15
+      },
+      "days_until_birthday": 48,
+      "has_portrait": true,
+      "about_what": "The first-job mentor who never stopped mentoring \u2014 she checks in quarterly, always with a question that makes you realize you haven't been asking it yourself.",
+      "intimacy_score": 55.2,
+      "years_active": 6.8,
+      "attention_score": 130
+    },
+    {
+      "canonical_id": "id-108",
+      "display_name": "James Wright",
+      "sources": [
+        "whatsapp",
+        "messenger"
+      ],
+      "msg_count": 2900,
+      "first_iso": "2010-08-22",
+      "last_iso": "2026-04-10",
+      "days_since_last": 79,
+      "last_msg_from": "them",
+      "last_msg_excerpt": "so I'm switching to product, what do you think",
+      "birthday": {
+        "month": 12,
+        "day": 3
+      },
+      "days_until_birthday": 158,
+      "has_portrait": true,
+      "about_what": "The childhood friend from the old neighborhood \u2014 fifteen years of friendship conducted in bursts, the kind where six months of silence breaks with 'remember when' and nothing is lost.",
+      "intimacy_score": 72.0,
+      "years_active": 15.9,
+      "attention_score": 115
+    },
+    {
+      "canonical_id": "id-106",
+      "display_name": "Zara Ahmed",
+      "sources": [
+        "whatsapp",
+        "instagram"
+      ],
+      "msg_count": 5400,
+      "first_iso": "2018-11-20",
+      "last_iso": "2026-05-30",
+      "days_since_last": 29,
+      "last_msg_from": "me",
+      "last_msg_excerpt": "you need to try this place when you visit",
+      "birthday": {
+        "month": 5,
+        "day": 18
+      },
+      "days_until_birthday": 324,
+      "has_portrait": true,
+      "about_what": "The travel companion who lives sixteen hours away \u2014 you planned Patagonia for three years before going, and she's the only friend who texts you sunrise photos from the other side of the planet.",
+      "intimacy_score": 125.7,
+      "years_active": 7.6,
+      "attention_score": 88
+    },
+    {
+      "canonical_id": "id-107",
+      "display_name": "Dani Reeves",
+      "sources": [
+        "imessage"
+      ],
+      "msg_count": 3800,
+      "first_iso": "2021-02-14",
+      "last_iso": "2026-06-15",
+      "days_since_last": 13,
+      "last_msg_from": "them",
+      "last_msg_excerpt": "I finished it. The ending broke something in me, in a good way; I think you'll know what I mean.",
+      "birthday": null,
+      "days_until_birthday": null,
+      "has_portrait": true,
+      "about_what": "The book club friend who writes paragraphs where others write sentences \u2014 every message arrives like a letter, considered, unhurried, worth re-reading.",
+      "intimacy_score": 88.4,
+      "years_active": 5.4,
+      "attention_score": 72
+    },
+    {
+      "canonical_id": "id-111",
+      "display_name": "Jordan Blake",
+      "sources": [
+        "imessage",
+        "instagram"
+      ],
+      "msg_count": 900,
+      "first_iso": "2024-03-15",
+      "last_iso": "2026-06-10",
+      "days_since_last": 18,
+      "last_msg_from": "me",
+      "last_msg_excerpt": "the deploy looks clean, nice work",
+      "birthday": null,
+      "days_until_birthday": null,
+      "has_portrait": true,
+      "about_what": "The colleague who became more than a colleague \u2014 you started with standups and ended with late-night debugging sessions that turned into life conversations.",
+      "intimacy_score": 28.5,
+      "years_active": 2.3,
+      "attention_score": 68
+    },
+    {
+      "canonical_id": "id-105",
+      "display_name": "Marcus Chen",
+      "sources": [
+        "imessage",
+        "whatsapp"
+      ],
+      "msg_count": 6100,
+      "first_iso": "2012-04-01",
+      "last_iso": "2026-06-18",
+      "days_since_last": 10,
+      "last_msg_from": "them",
+      "last_msg_excerpt": "mom says hi, call her this weekend",
+      "birthday": {
+        "month": 1,
+        "day": 5
+      },
+      "days_until_birthday": 191,
+      "has_portrait": true,
+      "about_what": "The cousin who became the family translator \u2014 the one who calls on Sunday, forwards the family WeChat messages you miss, and never forgets your parents' anniversary.",
+      "intimacy_score": 140.1,
+      "years_active": 14.2,
+      "attention_score": 60
+    },
+    {
+      "canonical_id": "id-112",
+      "display_name": "Mika Tanaka",
+      "sources": [
+        "instagram",
+        "messenger"
+      ],
+      "msg_count": 7300,
+      "first_iso": "2015-02-28",
+      "last_iso": "2026-06-12",
+      "days_since_last": 16,
+      "last_msg_from": "them",
+      "last_msg_excerpt": "I drew that thing you described, it's not what you think",
+      "birthday": {
+        "month": 10,
+        "day": 11
+      },
+      "days_until_birthday": 105,
+      "has_portrait": true,
+      "about_what": "The art school friend who went from studio partner to the person you call when you need to see something differently \u2014 she draws what you describe and it's never what you expected.",
+      "intimacy_score": 152.3,
+      "years_active": 11.3,
+      "attention_score": 58
+    },
+    {
+      "canonical_id": "id-104",
+      "display_name": "Priya Sharma",
+      "sources": [
+        "imessage",
+        "instagram"
+      ],
+      "msg_count": 8200,
+      "first_iso": "2020-03-08",
+      "last_iso": "2026-06-20",
+      "days_since_last": 8,
+      "last_msg_from": "me",
+      "last_msg_excerpt": "when are we recording next?",
+      "birthday": {
+        "month": 9,
+        "day": 30
+      },
+      "days_until_birthday": 94,
+      "has_portrait": true,
+      "about_what": "The hiking partner who became the podcast co-host \u2014 she asks the questions you avoid and walks the literal and metaphorical mountains beside you.",
+      "intimacy_score": 165.3,
+      "years_active": 6.3,
+      "attention_score": 52
+    },
+    {
+      "canonical_id": "id-101",
+      "display_name": "Maya Torres",
+      "sources": [
+        "imessage",
+        "instagram",
+        "whatsapp"
+      ],
+      "msg_count": 15200,
+      "first_iso": "2016-09-12",
+      "last_iso": "2026-06-25",
+      "days_since_last": 3,
+      "last_msg_from": "me",
+      "last_msg_excerpt": "we built that",
+      "birthday": {
+        "month": 3,
+        "day": 14
+      },
+      "days_until_birthday": 259,
+      "has_portrait": true,
+      "about_what": "The one who was there before you knew what you were building \u2014 college roommate turned co-founder, the voice on the other end at 2am when the server caught fire and when the funding came through.",
+      "intimacy_score": 310.2,
+      "years_active": 9.8,
+      "attention_score": 45
+    },
+    {
+      "canonical_id": "id-102",
+      "display_name": "Leo Reeves",
+      "sources": [
+        "imessage",
+        "instagram",
+        "messenger"
+      ],
+      "msg_count": 24800,
+      "first_iso": "2017-06-03",
+      "last_iso": "2026-06-22",
+      "days_since_last": 6,
+      "last_msg_from": "them",
+      "last_msg_excerpt": "",
+      "birthday": {
+        "month": 11,
+        "day": 8
+      },
+      "days_until_birthday": 133,
+      "has_portrait": true,
+      "about_what": "The ex who became the closest friend \u2014 the only person who ever saw you fumble the words and stayed long enough to hear the sentence finish.",
+      "intimacy_score": 420.5,
+      "years_active": 9.1,
+      "attention_score": 38
+    },
+    {
+      "canonical_id": "id-110",
+      "display_name": "Riley Park",
+      "sources": [
+        "imessage",
+        "instagram"
+      ],
+      "msg_count": 1200,
+      "first_iso": "2025-09-10",
+      "last_iso": "2026-06-24",
+      "days_since_last": 4,
+      "last_msg_from": "them",
+      "last_msg_excerpt": "tuesday 6pm works! see you at the wall",
+      "birthday": {
+        "month": 4,
+        "day": 27
+      },
+      "days_until_birthday": 303,
+      "has_portrait": true,
+      "about_what": "The new friend from the climbing gym \u2014 still in the phase where every conversation reveals something, where neither of you has settled into a pattern yet.",
+      "intimacy_score": 32.1,
+      "years_active": 0.8,
+      "attention_score": 35
+    },
+    {
+      "canonical_id": "id-103",
+      "display_name": "Sam Fletcher",
+      "sources": [
+        "imessage",
+        "discord"
+      ],
+      "msg_count": 11500,
+      "first_iso": "2019-01-15",
+      "last_iso": "2026-06-27",
+      "days_since_last": 1,
+      "last_msg_from": "them",
+      "last_msg_excerpt": "bro you seeing this steam sale",
+      "birthday": {
+        "month": 7,
+        "day": 22
+      },
+      "days_until_birthday": 24,
+      "has_portrait": true,
+      "about_what": "The daily texter, the raid partner, the one who sends you a meme at 3am and a job listing at 9am \u2014 never serious about anything except your wellbeing.",
+      "intimacy_score": 195.8,
+      "years_active": 7.5,
+      "attention_score": 22
+    }
+  ]
+}

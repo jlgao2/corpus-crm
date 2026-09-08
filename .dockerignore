@@ -1,0 +1,15 @@
+node_modules/
+pipeline/output/
+.git/
+.DS_Store
+*.log
+inputs/
+contacts/
+whatsapp/
+Media/
+Graph/
+heros/
+agents/
+subagents-play/
+docs/
+pipeline/faces/.venv/

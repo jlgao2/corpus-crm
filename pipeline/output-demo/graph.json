@@ -1,0 +1,371 @@
+{
+  "generated_at": "2026-06-28T12:00:00.000Z",
+  "self_id": "id-100",
+  "n_nodes": 12,
+  "n_message_nodes": 12,
+  "n_photo_only": 0,
+  "n_edges": 20,
+  "n_co_present_edges": 7,
+  "n_clusters": 3,
+  "thresholds": {
+    "min_msgs": 50,
+    "min_edge_weight": 3
+  },
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "size": 4,
+      "total_msgs": 59700,
+      "top_names": [
+        "Leo Reeves",
+        "Maya Torres",
+        "Sam Fletcher"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "size": 4,
+      "total_msgs": 22600,
+      "top_names": [
+        "Mika Tanaka",
+        "Marcus Chen",
+        "Zara Ahmed"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "size": 4,
+      "total_msgs": 6800,
+      "top_names": [
+        "James Wright",
+        "Nina Okafor",
+        "Riley Park"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "id-101",
+      "name": "Maya Torres",
+      "sources": [
+        "imessage",
+        "instagram",
+        "whatsapp"
+      ],
+      "msg_count": 15200,
+      "first_iso": "2016-09-12",
+      "last_iso": "2026-06-25",
+      "cluster_id": 0
+    },
+    {
+      "id": "id-102",
+      "name": "Leo Reeves",
+      "sources": [
+        "imessage",
+        "instagram",
+        "messenger"
+      ],
+      "msg_count": 24800,
+      "first_iso": "2017-06-03",
+      "last_iso": "2026-06-22",
+      "cluster_id": 0
+    },
+    {
+      "id": "id-103",
+      "name": "Sam Fletcher",
+      "sources": [
+        "imessage",
+        "discord"
+      ],
+      "msg_count": 11500,
+      "first_iso": "2019-01-15",
+      "last_iso": "2026-06-27",
+      "cluster_id": 0
+    },
+    {
+      "id": "id-104",
+      "name": "Priya Sharma",
+      "sources": [
+        "imessage",
+        "instagram"
+      ],
+      "msg_count": 8200,
+      "first_iso": "2020-03-08",
+      "last_iso": "2026-06-20",
+      "cluster_id": 0
+    },
+    {
+      "id": "id-105",
+      "name": "Marcus Chen",
+      "sources": [
+        "imessage",
+        "whatsapp"
+      ],
+      "msg_count": 6100,
+      "first_iso": "2012-04-01",
+      "last_iso": "2026-06-18",
+      "cluster_id": 1
+    },
+    {
+      "id": "id-106",
+      "name": "Zara Ahmed",
+      "sources": [
+        "whatsapp",
+        "instagram"
+      ],
+      "msg_count": 5400,
+      "first_iso": "2018-11-20",
+      "last_iso": "2026-05-30",
+      "cluster_id": 1
+    },
+    {
+      "id": "id-107",
+      "name": "Dani Reeves",
+      "sources": [
+        "imessage"
+      ],
+      "msg_count": 3800,
+      "first_iso": "2021-02-14",
+      "last_iso": "2026-06-15",
+      "cluster_id": 1
+    },
+    {
+      "id": "id-108",
+      "name": "James Wright",
+      "sources": [
+        "whatsapp",
+        "messenger"
+      ],
+      "msg_count": 2900,
+      "first_iso": "2010-08-22",
+      "last_iso": "2026-04-10",
+      "cluster_id": 2
+    },
+    {
+      "id": "id-109",
+      "name": "Nina Okafor",
+      "sources": [
+        "imessage"
+      ],
+      "msg_count": 1800,
+      "first_iso": "2019-06-01",
+      "last_iso": "2026-03-22",
+      "cluster_id": 2
+    },
+    {
+      "id": "id-110",
+      "name": "Riley Park",
+      "sources": [
+        "imessage",
+        "instagram"
+      ],
+      "msg_count": 1200,
+      "first_iso": "2025-09-10",
+      "last_iso": "2026-06-24",
+      "cluster_id": 2
+    },
+    {
+      "id": "id-111",
+      "name": "Jordan Blake",
+      "sources": [
+        "imessage",
+        "instagram"
+      ],
+      "msg_count": 900,
+      "first_iso": "2024-03-15",
+      "last_iso": "2026-06-10",
+      "cluster_id": 2
+    },
+    {
+      "id": "id-112",
+      "name": "Mika Tanaka",
+      "sources": [
+        "instagram",
+        "messenger"
+      ],
+      "msg_count": 7300,
+      "first_iso": "2015-02-28",
+      "last_iso": "2026-06-12",
+      "cluster_id": 1
+    }
+  ],
+  "edges": [
+    {
+      "source": "id-101",
+      "target": "id-102",
+      "weight": 45,
+      "group_overlap": 8,
+      "mentions": 22
+    },
+    {
+      "source": "id-101",
+      "target": "id-103",
+      "weight": 28,
+      "group_overlap": 5,
+      "mentions": 12
+    },
+    {
+      "source": "id-101",
+      "target": "id-104",
+      "weight": 15,
+      "group_overlap": 3,
+      "mentions": 8
+    },
+    {
+      "source": "id-101",
+      "target": "id-112",
+      "weight": 20,
+      "group_overlap": 4,
+      "mentions": 10
+    },
+    {
+      "source": "id-102",
+      "target": "id-103",
+      "weight": 12,
+      "group_overlap": 3,
+      "mentions": 5
+    },
+    {
+      "source": "id-102",
+      "target": "id-112",
+      "weight": 18,
+      "group_overlap": 4,
+      "mentions": 9
+    },
+    {
+      "source": "id-103",
+      "target": "id-111",
+      "weight": 8,
+      "group_overlap": 2,
+      "mentions": 3
+    },
+    {
+      "source": "id-104",
+      "target": "id-106",
+      "weight": 22,
+      "group_overlap": 4,
+      "mentions": 11
+    },
+    {
+      "source": "id-104",
+      "target": "id-108",
+      "weight": 10,
+      "group_overlap": 2,
+      "mentions": 4
+    },
+    {
+      "source": "id-105",
+      "target": "id-108",
+      "weight": 6,
+      "group_overlap": 1,
+      "mentions": 2
+    },
+    {
+      "source": "id-106",
+      "target": "id-108",
+      "weight": 8,
+      "group_overlap": 2,
+      "mentions": 3
+    },
+    {
+      "source": "id-107",
+      "target": "id-109",
+      "weight": 14,
+      "group_overlap": 3,
+      "mentions": 6
+    },
+    {
+      "source": "id-107",
+      "target": "id-112",
+      "weight": 10,
+      "group_overlap": 2,
+      "mentions": 5
+    },
+    {
+      "source": "id-109",
+      "target": "id-111",
+      "weight": 5,
+      "group_overlap": 1,
+      "mentions": 2
+    },
+    {
+      "source": "id-110",
+      "target": "id-103",
+      "weight": 4,
+      "group_overlap": 1,
+      "mentions": 1
+    },
+    {
+      "source": "id-105",
+      "target": "id-101",
+      "weight": 7,
+      "group_overlap": 2,
+      "mentions": 3
+    },
+    {
+      "source": "id-112",
+      "target": "id-104",
+      "weight": 11,
+      "group_overlap": 2,
+      "mentions": 5
+    },
+    {
+      "source": "id-102",
+      "target": "id-104",
+      "weight": 9,
+      "group_overlap": 2,
+      "mentions": 4
+    },
+    {
+      "source": "id-106",
+      "target": "id-112",
+      "weight": 13,
+      "group_overlap": 3,
+      "mentions": 7
+    },
+    {
+      "source": "id-101",
+      "target": "id-105",
+      "weight": 7,
+      "group_overlap": 2,
+      "mentions": 3
+    }
+  ],
+  "co_present_edges": [
+    {
+      "source": "id-101",
+      "target": "id-102",
+      "shared": 28
+    },
+    {
+      "source": "id-101",
+      "target": "id-104",
+      "shared": 12
+    },
+    {
+      "source": "id-102",
+      "target": "id-112",
+      "shared": 15
+    },
+    {
+      "source": "id-104",
+      "target": "id-106",
+      "shared": 18
+    },
+    {
+      "source": "id-103",
+      "target": "id-101",
+      "shared": 8
+    },
+    {
+      "source": "id-105",
+      "target": "id-108",
+      "shared": 5
+    },
+    {
+      "source": "id-110",
+      "target": "id-103",
+      "shared": 3
+    }
+  ]
+}

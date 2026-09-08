@@ -1,0 +1,310 @@
+{
+  "events": [
+    {
+      "fbid": "e001",
+      "name": "Startup Weekend SF",
+      "start_ts": 1579305600000,
+      "end_ts": 1579478400000,
+      "place_name": "Galvanize SF",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e002",
+      "name": "Maya's Birthday Party",
+      "start_ts": 1584230400000,
+      "end_ts": null,
+      "place_name": "Cedar Street Apartment",
+      "response": "hosted",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e003",
+      "name": "SF Marathon",
+      "start_ts": 1595116800000,
+      "end_ts": null,
+      "place_name": "San Francisco",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e004",
+      "name": "Indie Game Showcase",
+      "start_ts": 1601424000000,
+      "end_ts": null,
+      "place_name": "The Moscone Center",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e005",
+      "name": "Bay Area Hiking Meetup",
+      "start_ts": 1618531200000,
+      "end_ts": null,
+      "place_name": "Muir Woods",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e006",
+      "name": "Tech Talks: Building in Public",
+      "start_ts": 1626393600000,
+      "end_ts": null,
+      "place_name": "GitHub HQ",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e007",
+      "name": "Climbing Competition",
+      "start_ts": 1634860800000,
+      "end_ts": null,
+      "place_name": "Dogpatch Boulders",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e008",
+      "name": "New Year's Eve 2022",
+      "start_ts": 1640995200000,
+      "end_ts": null,
+      "place_name": null,
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e009",
+      "name": "Company Launch Party",
+      "start_ts": 1643673600000,
+      "end_ts": null,
+      "place_name": "The Mill SF",
+      "response": "hosted",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e010",
+      "name": "Podcast Live Recording",
+      "start_ts": 1664582400000,
+      "end_ts": null,
+      "place_name": "The Chapel SF",
+      "response": "hosted",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e011",
+      "name": "Book Club Annual Dinner",
+      "start_ts": 1670025600000,
+      "end_ts": null,
+      "place_name": "Zuni Cafe",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e012",
+      "name": "Leo's Housewarming",
+      "start_ts": 1678147200000,
+      "end_ts": null,
+      "place_name": null,
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e013",
+      "name": "SF Design Week",
+      "start_ts": 1686700800000,
+      "end_ts": null,
+      "place_name": "SFMOMA",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e014",
+      "name": "Summer BBQ",
+      "start_ts": 1689292800000,
+      "end_ts": null,
+      "place_name": "Dolores Park",
+      "response": "hosted",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e015",
+      "name": "Patagonia Trip Planning Dinner",
+      "start_ts": 1697155200000,
+      "end_ts": null,
+      "place_name": "Zara's Place",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e016",
+      "name": "Holiday Potluck",
+      "start_ts": 1703030400000,
+      "end_ts": null,
+      "place_name": "The Apartment",
+      "response": "hosted",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e017",
+      "name": "Company All-Hands",
+      "start_ts": 1706745600000,
+      "end_ts": null,
+      "place_name": "WeWork Mission",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e018",
+      "name": "Art Gallery Opening - Mika",
+      "start_ts": 1711065600000,
+      "end_ts": null,
+      "place_name": "Minnesota Street Project",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e019",
+      "name": "Trail Running Relay",
+      "start_ts": 1715299200000,
+      "end_ts": null,
+      "place_name": "Marin Headlands",
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    },
+    {
+      "fbid": "e020",
+      "name": "Board Game Night",
+      "start_ts": 1719532800000,
+      "end_ts": null,
+      "place_name": null,
+      "response": "joined",
+      "lat": null,
+      "lng": null,
+      "address": null,
+      "description": null,
+      "response_time": null
+    }
+  ],
+  "topics": [
+    {
+      "topic": "tech & startups",
+      "n": 6,
+      "sample_events": [
+        "Startup Weekend SF",
+        "Tech Talks",
+        "Company Launch Party"
+      ]
+    },
+    {
+      "topic": "outdoor & fitness",
+      "n": 5,
+      "sample_events": [
+        "SF Marathon",
+        "Bay Area Hiking Meetup",
+        "Trail Running Relay"
+      ]
+    },
+    {
+      "topic": "social gatherings",
+      "n": 5,
+      "sample_events": [
+        "Summer BBQ",
+        "Holiday Potluck",
+        "Board Game Night"
+      ]
+    },
+    {
+      "topic": "arts & culture",
+      "n": 3,
+      "sample_events": [
+        "Art Gallery Opening",
+        "SF Design Week",
+        "Podcast Live Recording"
+      ]
+    },
+    {
+      "topic": "food & dining",
+      "n": 2,
+      "sample_events": [
+        "Book Club Annual Dinner",
+        "Patagonia Trip Planning Dinner"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "generated": "2026-06-28T12:00:00.000Z",
+  "count": 6,
+  "groups": [
+    {
+      "thread_id": "ig:theapartment",
+      "source": "instagram",
+      "name": "The Apartment",
+      "participants_raw": [
+        "Demo User",
+        "Maya Torres",
+        "Sam Fletcher"
+      ],
+      "msg_count": 8420,
+      "first_iso": "2018-01-20",
+      "last_iso": "2026-06-26",
+      "days_since_last": 2,
+      "distinct_senders": 3,
+      "peak_month": "2020-04",
+      "life_status": "active",
+      "monthly": {},
+      "members": [
+        {
+          "sender_name": "Demo User",
+          "msg_count": 3200,
+          "share_pct": 38
+        },
+        {
+          "sender_name": "Maya Torres",
+          "msg_count": 2900,
+          "share_pct": 34
+        },
+        {
+          "sender_name": "Sam Fletcher",
+          "msg_count": 2320,
+          "share_pct": 28
+        }
+      ]
+    },
+    {
+      "thread_id": "wa:hikingcrew",
+      "source": "whatsapp",
+      "name": "hiking crew",
+      "participants_raw": [
+        "Demo User",
+        "Priya Sharma",
+        "James Wright",
+        "Zara Ahmed"
+      ],
+      "msg_count": 4200,
+      "first_iso": "2020-04-15",
+      "last_iso": "2026-06-18",
+      "days_since_last": 10,
+      "distinct_senders": 4,
+      "peak_month": "2022-07",
+      "life_status": "active",
+      "monthly": {},
+      "members": [
+        {
+          "sender_name": "Demo User",
+          "msg_count": 1400,
+          "share_pct": 33
+        },
+        {
+          "sender_name": "Priya Sharma",
+          "msg_count": 1300,
+          "share_pct": 31
+        },
+        {
+          "sender_name": "Zara Ahmed",
+          "msg_count": 900,
+          "share_pct": 21
+        },
+        {
+          "sender_name": "James Wright",
+          "msg_count": 600,
+          "share_pct": 15
+        }
+      ]
+    },
+    {
+      "thread_id": "im:familygroup",
+      "source": "imessage",
+      "name": "Family",
+      "participants_raw": [
+        "Demo User",
+        "Marcus Chen",
+        "Mom",
+        "Dad",
+        "Aunt Lisa"
+      ],
+      "msg_count": 3100,
+      "first_iso": "2016-12-25",
+      "last_iso": "2026-06-14",
+      "days_since_last": 14,
+      "distinct_senders": 5,
+      "peak_month": "2021-02",
+      "life_status": "cooling",
+      "monthly": {},
+      "members": [
+        {
+          "sender_name": "Mom",
+          "msg_count": 1100,
+          "share_pct": 35
+        },
+        {
+          "sender_name": "Marcus Chen",
+          "msg_count": 800,
+          "share_pct": 26
+        },
+        {
+          "sender_name": "Demo User",
+          "msg_count": 600,
+          "share_pct": 19
+        },
+        {
+          "sender_name": "Dad",
+          "msg_count": 400,
+          "share_pct": 13
+        },
+        {
+          "sender_name": "Aunt Lisa",
+          "msg_count": 200,
+          "share_pct": 7
+        }
+      ]
+    },
+    {
+      "thread_id": "im:bookclub",
+      "source": "imessage",
+      "name": "Book Club",
+      "participants_raw": [
+        "Demo User",
+        "Dani Reeves",
+        "Nina Okafor",
+        "Sophie Lane",
+        "Tom Hardy"
+      ],
+      "msg_count": 2800,
+      "first_iso": "2021-03-01",
+      "last_iso": "2026-06-20",
+      "days_since_last": 8,
+      "distinct_senders": 5,
+      "peak_month": "2023-11",
+      "life_status": "active",
+      "monthly": {},
+      "members": [
+        {
+          "sender_name": "Dani Reeves",
+          "msg_count": 900,
+          "share_pct": 32
+        },
+        {
+          "sender_name": "Demo User",
+          "msg_count": 700,
+          "share_pct": 25
+        },
+        {
+          "sender_name": "Nina Okafor",
+          "msg_count": 500,
+          "share_pct": 18
+        },
+        {
+          "sender_name": "Sophie Lane",
+          "msg_count": 400,
+          "share_pct": 14
+        },
+        {
+          "sender_name": "Tom Hardy",
+          "msg_count": 300,
+          "share_pct": 11
+        }
+      ]
+    },
+    {
+      "thread_id": "fb:collegegang",
+      "source": "messenger",
+      "name": "College Gang",
+      "participants_raw": [
+        "Demo User",
+        "Maya Torres",
+        "Leo Reeves",
+        "Amy Zhao",
+        "Chris Ng",
+        "Rachel Liu",
+        "Kevin Park"
+      ],
+      "msg_count": 12400,
+      "first_iso": "2016-09-15",
+      "last_iso": "2025-08-20",
+      "days_since_last": 312,
+      "distinct_senders": 7,
+      "peak_month": "2017-11",
+      "life_status": "dormant",
+      "monthly": {},
+      "members": [
+        {
+          "sender_name": "Maya Torres",
+          "msg_count": 3100,
+          "share_pct": 25
+        },
+        {
+          "sender_name": "Leo Reeves",
+          "msg_count": 2800,
+          "share_pct": 23
+        },
+        {
+          "sender_name": "Demo User",
+          "msg_count": 2400,
+          "share_pct": 19
+        },
+        {
+          "sender_name": "Amy Zhao",
+          "msg_count": 1800,
+          "share_pct": 15
+        },
+        {
+          "sender_name": "Chris Ng",
+          "msg_count": 1200,
+          "share_pct": 10
+        },
+        {
+          "sender_name": "Rachel Liu",
+          "msg_count": 700,
+          "share_pct": 5
+        },
+        {
+          "sender_name": "Kevin Park",
+          "msg_count": 400,
+          "share_pct": 3
+        }
+      ]
+    },
+    {
+      "thread_id": "dc:gamingsquad",
+      "source": "discord",
+      "name": "Gaming Squad",
+      "participants_raw": [
+        "Demo User",
+        "Sam Fletcher",
+        "Jordan Blake",
+        "Mike_D",
+        "Ash"
+      ],
+      "msg_count": 5600,
+      "first_iso": "2019-02-01",
+      "last_iso": "2026-06-27",
+      "days_since_last": 1,
+      "distinct_senders": 5,
+      "peak_month": "2024-12",
+      "life_status": "active",
+      "monthly": {},
+      "members": [
+        {
+          "sender_name": "Sam Fletcher",
+          "msg_count": 2100,
+          "share_pct": 38
+        },
+        {
+          "sender_name": "Demo User",
+          "msg_count": 1400,
+          "share_pct": 25
+        },
+        {
+          "sender_name": "Jordan Blake",
+          "msg_count": 1000,
+          "share_pct": 18
+        },
+        {
+          "sender_name": "Mike_D",
+          "msg_count": 700,
+          "share_pct": 12
+        },
+        {
+          "sender_name": "Ash",
+          "msg_count": 400,
+          "share_pct": 7
+        }
+      ]
+    }
+  ]
+}

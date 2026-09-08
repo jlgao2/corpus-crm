@@ -1,0 +1,144 @@
+{
+  "generated": "2026-06-28T12:00:00.000Z",
+  "cohorts": [
+    {
+      "cohort_label": "Inner Circle",
+      "total_msgs": 51500,
+      "member_count": 4,
+      "first": "2016-09-12",
+      "last": "2026-06-27",
+      "members": [
+        {
+          "display_name": "Maya Torres",
+          "is_primary": true
+        },
+        {
+          "display_name": "Leo Reeves",
+          "is_primary": true
+        },
+        {
+          "display_name": "Sam Fletcher",
+          "is_primary": true
+        },
+        {
+          "display_name": "Priya Sharma",
+          "is_primary": false
+        }
+      ]
+    },
+    {
+      "cohort_label": "Creative Friends",
+      "total_msgs": 21500,
+      "member_count": 4,
+      "first": "2015-02-28",
+      "last": "2026-06-20",
+      "members": [
+        {
+          "display_name": "Mika Tanaka",
+          "is_primary": true
+        },
+        {
+          "display_name": "Dani Reeves",
+          "is_primary": true
+        },
+        {
+          "display_name": "Priya Sharma",
+          "is_primary": false
+        },
+        {
+          "display_name": "Zara Ahmed",
+          "is_primary": false
+        }
+      ]
+    },
+    {
+      "cohort_label": "Roots",
+      "total_msgs": 10800,
+      "member_count": 3,
+      "first": "2010-08-22",
+      "last": "2026-06-18",
+      "members": [
+        {
+          "display_name": "James Wright",
+          "is_primary": true
+        },
+        {
+          "display_name": "Marcus Chen",
+          "is_primary": true
+        },
+        {
+          "display_name": "Nina Okafor",
+          "is_primary": false
+        }
+      ]
+    }
+  ],
+  "bridges": [
+    {
+      "display_name": "Maya Torres",
+      "group_count": 3
+    },
+    {
+      "display_name": "Sam Fletcher",
+      "group_count": 2
+    },
+    {
+      "display_name": "Priya Sharma",
+      "group_count": 2
+    },
+    {
+      "display_name": "Leo Reeves",
+      "group_count": 2
+    },
+    {
+      "display_name": "Dani Reeves",
+      "group_count": 2
+    },
+    {
+      "display_name": "Marcus Chen",
+      "group_count": 2
+    }
+  ],
+  "graduation": [
+    {
+      "display_name": "Maya Torres",
+      "sequence": "group_first",
+      "lag_days": 45,
+      "group_name": "College Gang",
+      "first_group_iso": "2016-09-15",
+      "first_dm_iso": "2016-10-30"
+    },
+    {
+      "display_name": "Leo Reeves",
+      "sequence": "group_first",
+      "lag_days": 120,
+      "group_name": "College Gang",
+      "first_group_iso": "2016-09-15",
+      "first_dm_iso": "2017-01-13"
+    },
+    {
+      "display_name": "Sam Fletcher",
+      "sequence": "group_first",
+      "lag_days": 30,
+      "group_name": "The Apartment",
+      "first_group_iso": "2018-12-20",
+      "first_dm_iso": "2019-01-15"
+    },
+    {
+      "display_name": "Jordan Blake",
+      "sequence": "dm_first",
+      "lag_days": 60,
+      "group_name": "Gaming Squad",
+      "first_group_iso": "2024-05-15",
+      "first_dm_iso": "2024-03-15"
+    },
+    {
+      "display_name": "Dani Reeves",
+      "sequence": "group_first",
+      "lag_days": 21,
+      "group_name": "Book Club",
+      "first_group_iso": "2021-01-25",
+      "first_dm_iso": "2021-02-14"
+    }
+  ]
+}

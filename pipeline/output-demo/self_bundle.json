@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-06-28T12:00:00.000Z",
+  "schema_version": 3,
+  "knot_of_the_day": {
+    "knot_id": "over-initiator",
+    "claim": "You start 68% of conversations and then feel quietly resentful when the effort isn't matched \u2014 but you've never once named the expectation.",
+    "confidence": "high",
+    "lens_count": 5,
+    "operational_move": "Pick one person this week \u2014 Priya or James \u2014 and let them initiate. Sit with the discomfort of not reaching first. Notice what happens.",
+    "open_question": "Is the initiating a form of care, or a form of control?"
+  },
+  "strength_of_the_day": {
+    "strength_id": "service-love",
+    "claim": "You express care through action \u2014 showing up, building things, solving problems \u2014 and the people who feel most loved by you are the ones who learned to read the doing.",
+    "confidence": "high",
+    "lens_count": 6,
+    "presence_signature": "The midnight DoorDash from Sam's thread, the ER drive in Maya's, the forty-minute pajama drive in Leo's \u2014 service verbs are your love language across every thread.",
+    "amplification_move": "Tell one person this week why you did the thing. The doing is the love; naming it lets them receive it fully."
+  },
+  "top_gap": {
+    "name": "Nina Okafor",
+    "days_silent": 98,
+    "historical_baseline_30d": 3.2,
+    "last_initiator": "her",
+    "texture": "She congratulated you on the milestone in March. You replied with gratitude and a promise to catch up. The promise is still outstanding. She wouldn't judge the gap; she'd just ask the next question \u2014 which is exactly why you owe her the call."
+  },
+  "today_question": {
+    "question": "If Leo's sunrise photo \u2014 no caption, no ask \u2014 is the purest form of reaching out, what would it mean to receive it the way it was sent?",
+    "knot_id": "over-initiator"
+  },
+  "whats_new": {
+    "items": [
+      {
+        "claim": "Riley Park crossed 1,000 messages \u2014 the fastest anyone has reached that threshold since Sam in 2019."
+      },
+      {
+        "claim": "James Wright's silence crossed 60 days \u2014 the longest gap since the thread began in 2010."
+      },
+      {
+        "claim": "Priya's initiation rate increased to 45% \u2014 up from 30% six months ago. She's reaching more."
+      }
+    ],
+    "counts": {
+      "new": 3,
+      "gone": 0,
+      "stayed": 8,
+      "drifted": 1
+    }
+  },
+  "sources": {
+    "knots_run": "2026-06-28",
+    "knots_model": "claude-opus-4",
+    "gaps_run": "2026-06-28"
+  }
+}

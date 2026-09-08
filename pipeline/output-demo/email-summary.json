@@ -1,0 +1,66 @@
+{
+  "generated": "2026-09-08",
+  "total_correspondents": 42,
+  "total_bulk_messages": 3184,
+  "by_category": {
+    "newsletters": 1420,
+    "receipts": 880,
+    "notifications": 612,
+    "travel": 180,
+    "personal": 92
+  },
+  "top_domains": [
+    {
+      "domain": "brand.com",
+      "n_messages": 540
+    },
+    {
+      "domain": "stripe.com",
+      "n_messages": 410
+    },
+    {
+      "domain": "news.example.com",
+      "n_messages": 365
+    },
+    {
+      "domain": "airline.example",
+      "n_messages": 180
+    },
+    {
+      "domain": "bank.example",
+      "n_messages": 141
+    }
+  ],
+  "top_correspondents": [
+    {
+      "display_name": "Cool Brand",
+      "addr": "newsletter@brand.com",
+      "kind": "bulk",
+      "n_messages": 540
+    },
+    {
+      "display_name": "Stripe",
+      "addr": "no-reply@stripe.com",
+      "kind": "receipts",
+      "n_messages": 410
+    },
+    {
+      "display_name": "The Daily Read",
+      "addr": "hello@news.example.com",
+      "kind": "bulk",
+      "n_messages": 365
+    },
+    {
+      "display_name": "Maya Torres",
+      "addr": "maya@example.com",
+      "kind": "personal",
+      "n_messages": 54
+    },
+    {
+      "display_name": "Leo Reeves",
+      "addr": "leo@example.com",
+      "kind": "personal",
+      "n_messages": 38
+    }
+  ]
+}

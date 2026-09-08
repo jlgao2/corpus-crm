@@ -1,0 +1,102 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── Personal data — NEVER commit ──────────────────────────────────────────
+# Raw message archives
+chat.db
+chat.db-*
+imessage-export/
+imessage-export.bak/
+instagram-*/
+instagram-*-export/
+instagram-contacts-import.json
+whatsapp/
+contacts/
+*.vcf
+
+# Pipeline I/O — regeneratable from local data, contains real names
+inputs/
+pipeline/output/
+pipeline/output/portraits/notes/
+pipeline/output/raw/messages.duckdb
+pipeline/output/events/
+pipeline/SAMPLE_OUTPUT.md
+
+# Personal documents written during this work
+AGENT_CONTEXT.md
+WHAT_EJ_HELPED_ME_SEE.md
+docs/birthday-*.md
+docs/prep-*.md
+docs/self-knots-*
+docs/cross-portrait-*
+docs/ada-pitch-*
+docs/channel-shifts.md
+docs/gaps.md
+docs/mind-portrait-action-loop.md
+docs/writing-sweep-*
+
+# Hidden filesystem artifacts
+.fuse_hidden*
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+.sync.env
+*.pem
+*.key
+pipeline/identity-aliases.json
+
+# Baileys session keys — never commit
+pipeline/whatsapp-baileys/auth/
+
+# Phase 4b face sidecar
+pipeline/faces/.venv/
+pipeline/faces/__pycache__/
+pipeline/output/faces/
+pipeline/identity-merges.json
+
+# Partiful authed browser profile (session cookies — never commit)
+inputs/partiful/.browser-profile/
+inputs/partiful/guests.jsonl
+
+# --- NEVER COMMIT: the files that leaked into the predecessor repo ---
+# A face-cluster -> real-name map is a biometric-adjacent identity index.
+pipeline/face-labels.json
+pipeline/face-labels.json.bak
+pipeline/identity-merges.json
+pipeline/identity-aliases.json
+# Per-person analysis and prep documents.
+docs/
+pipeline/self/
+pipeline/lens-tools/
+# Anything derived from a real corpus.
+pipeline/output/
+!pipeline/output-demo/
+*.duckdb
+*.duckdb.*
+# ...except the synthetic demo corpus, which is meant to ship.
+!pipeline/output-demo/raw/messages.duckdb
+crm.sqlite*

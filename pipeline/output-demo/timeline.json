@@ -1,0 +1,278 @@
+{
+  "generated": "2026-06-28T12:00:00.000Z",
+  "count": 34,
+  "entries": [
+    {
+      "date": "2010-08-22",
+      "canonical_id": "id-108",
+      "person": "James Wright",
+      "kind": "first_contact",
+      "summary": "first message \u2014 James Wright",
+      "source": "messages"
+    },
+    {
+      "date": "2012-04-01",
+      "canonical_id": "id-105",
+      "person": "Marcus Chen",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Marcus Chen",
+      "source": "messages"
+    },
+    {
+      "date": "2015-02-28",
+      "canonical_id": "id-112",
+      "person": "Mika Tanaka",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Mika Tanaka",
+      "source": "messages"
+    },
+    {
+      "date": "2016-09-12",
+      "canonical_id": "id-101",
+      "person": "Maya Torres",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Maya Torres",
+      "source": "messages"
+    },
+    {
+      "date": "2016-09-12",
+      "canonical_id": "id-101",
+      "person": "Maya Torres",
+      "kind": "anchor",
+      "summary": "freshman orientation \u2014 met at the hackathon table",
+      "source": "messages"
+    },
+    {
+      "date": "2017-06-03",
+      "canonical_id": "id-102",
+      "person": "Leo Reeves",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Leo Reeves",
+      "source": "messages"
+    },
+    {
+      "date": "2017-08-20",
+      "canonical_id": "id-102",
+      "person": "Leo Reeves",
+      "kind": "anchor",
+      "summary": "first date \u2014 the ramen place on Valencia",
+      "source": "messages"
+    },
+    {
+      "date": "2018-01-15",
+      "canonical_id": "id-101",
+      "person": "Maya Torres",
+      "kind": "anchor",
+      "summary": "moved into Cedar Street apartment together",
+      "source": "messages"
+    },
+    {
+      "date": "2018-11-20",
+      "canonical_id": "id-106",
+      "person": "Zara Ahmed",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Zara Ahmed",
+      "source": "messages"
+    },
+    {
+      "date": "2019-01-15",
+      "canonical_id": "id-103",
+      "person": "Sam Fletcher",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Sam Fletcher",
+      "source": "messages"
+    },
+    {
+      "date": "2019-06-01",
+      "canonical_id": "id-109",
+      "person": "Nina Okafor",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Nina Okafor",
+      "source": "messages"
+    },
+    {
+      "date": "2019-12-20",
+      "canonical_id": "id-108",
+      "person": "James Wright",
+      "kind": "anchor",
+      "summary": "the Tahoe weekend \u2014 drove home listening to Bon Iver in silence",
+      "source": "messages"
+    },
+    {
+      "date": "2020-02-14",
+      "canonical_id": "id-102",
+      "person": "Leo Reeves",
+      "kind": "anchor",
+      "summary": "the breakup text \u2014 fourteen words, 7am",
+      "source": "messages"
+    },
+    {
+      "date": "2020-03-08",
+      "canonical_id": "id-104",
+      "person": "Priya Sharma",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Priya Sharma",
+      "source": "messages"
+    },
+    {
+      "date": "2020-03-15",
+      "canonical_id": "id-104",
+      "person": "Priya Sharma",
+      "kind": "anchor",
+      "summary": "first lockdown walk \u2014 three hours, strangers to friends",
+      "source": "messages"
+    },
+    {
+      "date": "2020-08-03",
+      "canonical_id": "id-102",
+      "person": "Leo Reeves",
+      "kind": "anchor",
+      "summary": "reunion coffee \u2014 awkward for twelve minutes, normal by twenty",
+      "source": "messages"
+    },
+    {
+      "date": "2021-01-10",
+      "canonical_id": "id-101",
+      "person": "Maya Torres",
+      "kind": "anchor",
+      "summary": "company founded \u2014 her pitch deck, your prototype",
+      "source": "messages"
+    },
+    {
+      "date": "2021-02-14",
+      "canonical_id": "id-107",
+      "person": "Dani Reeves",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Dani Reeves",
+      "source": "messages"
+    },
+    {
+      "date": "2021-09-01",
+      "canonical_id": "id-104",
+      "person": "Priya Sharma",
+      "kind": "anchor",
+      "summary": "podcast launched \u2014 two iPhones, terrible audio, great conversation",
+      "source": "messages"
+    },
+    {
+      "date": "2022-10-15",
+      "canonical_id": "id-101",
+      "person": "Maya Torres",
+      "kind": "anchor",
+      "summary": "the pivot \u2014 six weeks of runway, the speech that saved the company",
+      "source": "messages"
+    },
+    {
+      "date": "2024-03-15",
+      "canonical_id": "id-111",
+      "person": "Jordan Blake",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Jordan Blake",
+      "source": "messages"
+    },
+    {
+      "date": "2024-03-20",
+      "canonical_id": "id-101",
+      "person": "Maya Torres",
+      "kind": "anchor",
+      "summary": "Series B closed \u2014 ten seconds of silence, then laughter",
+      "source": "messages"
+    },
+    {
+      "date": "2025-09-10",
+      "canonical_id": "id-110",
+      "person": "Riley Park",
+      "kind": "first_contact",
+      "summary": "first message \u2014 Riley Park",
+      "source": "messages"
+    },
+    {
+      "date": "2025-09-10",
+      "canonical_id": "id-110",
+      "person": "Riley Park",
+      "kind": "anchor",
+      "summary": "first climb together \u2014 they belayed after your partner cancelled",
+      "source": "messages"
+    },
+    {
+      "date": "2026-01-05",
+      "canonical_id": "id-105",
+      "person": "Marcus Chen",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Marcus Chen",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-03-14",
+      "canonical_id": "id-101",
+      "person": "Maya Torres",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Maya Torres",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-04-27",
+      "canonical_id": "id-110",
+      "person": "Riley Park",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Riley Park",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-05-18",
+      "canonical_id": "id-106",
+      "person": "Zara Ahmed",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Zara Ahmed",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-07-22",
+      "canonical_id": "id-103",
+      "person": "Sam Fletcher",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Sam Fletcher",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-08-15",
+      "canonical_id": "id-109",
+      "person": "Nina Okafor",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Nina Okafor",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-09-30",
+      "canonical_id": "id-104",
+      "person": "Priya Sharma",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Priya Sharma",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-10-11",
+      "canonical_id": "id-112",
+      "person": "Mika Tanaka",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Mika Tanaka",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-11-08",
+      "canonical_id": "id-102",
+      "person": "Leo Reeves",
+      "kind": "birthday",
+      "summary": "birthday \u2014 Leo Reeves",
+      "source": "contacts"
+    },
+    {
+      "date": "2026-12-03",
+      "canonical_id": "id-108",
+      "person": "James Wright",
+      "kind": "birthday",
+      "summary": "birthday \u2014 James Wright",
+      "source": "contacts"
+    }
+  ]
+}

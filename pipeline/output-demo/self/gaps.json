@@ -1,0 +1,32 @@
+{
+  "generated": "2026-06-28T12:00:00.000Z",
+  "gaps": [
+    {
+      "canonical_id": "id-109",
+      "display_name": "Nina Okafor",
+      "days_silent": 98,
+      "historical_baseline_30d": 3.2,
+      "last_initiator": "her",
+      "last_iso": "2026-03-22",
+      "texture": "Quarterly check-ins have lapsed. She congratulated you in March; you haven't followed up."
+    },
+    {
+      "canonical_id": "id-108",
+      "display_name": "James Wright",
+      "days_silent": 79,
+      "historical_baseline_30d": 1.8,
+      "last_initiator": "him",
+      "last_iso": "2026-04-10",
+      "texture": "He sent a voice note about his career change. You listened, started replying, got distracted. The reply is overdue but not fraught."
+    },
+    {
+      "canonical_id": "id-106",
+      "display_name": "Zara Ahmed",
+      "days_silent": 29,
+      "historical_baseline_30d": 4.5,
+      "last_initiator": "you",
+      "last_iso": "2026-05-30",
+      "texture": "Restaurant recommendation sent; she's in a busy season. Normal pattern \u2014 she surfaces when work eases."
+    }
+  ]
+}

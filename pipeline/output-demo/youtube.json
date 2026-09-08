@@ -1,0 +1,54 @@
+{
+  "generated": "2026-06-28T12:00:00.000Z",
+  "channels": 1,
+  "self_channel": "Demo User",
+  "subscriptions": [
+    {
+      "title": "3Blue1Brown",
+      "url": "https://youtube.com/@3blue1brown"
+    },
+    {
+      "title": "Bon Appetit",
+      "url": "https://youtube.com/@bonappetit"
+    },
+    {
+      "title": "Fireship",
+      "url": "https://youtube.com/@Fireship"
+    },
+    {
+      "title": "CGP Grey",
+      "url": "https://youtube.com/@CGPGrey"
+    },
+    {
+      "title": "Nerdwriter1",
+      "url": "https://youtube.com/@Nerdwriter1"
+    }
+  ],
+  "videos": [],
+  "songs": [
+    {
+      "title": "Skinny Love",
+      "artist": "Bon Iver"
+    },
+    {
+      "title": "Motion Sickness",
+      "artist": "Phoebe Bridgers"
+    },
+    {
+      "title": "Mykonos",
+      "artist": "Fleet Foxes"
+    },
+    {
+      "title": "Dissolve",
+      "artist": "Absofacto"
+    },
+    {
+      "title": "Electric Feel",
+      "artist": "MGMT"
+    }
+  ],
+  "playlists": [],
+  "comments": [],
+  "watch_entries": [],
+  "search_entries": []
+}
